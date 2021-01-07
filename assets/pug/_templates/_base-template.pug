@@ -1,0 +1,17 @@
+include ../../components/_hero/_hero.pug
+include ../../components/_logo/_logo.pug
+include ../../components/_socials/_socials.pug
+include ../../components/_phone-number/_phone-number.pug
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="css/style.css")
+    link(rel='preconnect' href='https://fonts.gstatic.com')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@300&display=swap' rel='stylesheet')
+    title Profile
+  body
+    .wrapper
+      block content
