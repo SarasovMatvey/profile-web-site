@@ -1,0 +1,23 @@
+mixin entrol(data)
+  aside.entrol
+    .container
+      .entrol__inner
+        .entrol__entrol-now.stretch-outside-viewport.stretch-outside-viewport_to_left
+          p.entrol__entrol-now-text
+            |Choose from a range of great products and recognised certificate and diploma courses.
+            |
+            a.entrol__link(href="#") Enrol Online Now
+          a.entrol__entrol-now-show-more(href="#")
+            i.icon-ent-chevron-right
+        .entrol__contact-us-wrap
+          .entrol__contact-us
+            h2.entrol__contact-us-title Contact us Today
+            p.entrol__contact-us-text.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  eiusmod tempor
+            .entrol__contact-us-form
+              form.entrol__contact-us-form-inner(action="#")
+                label.entrol__contact-us-label(for="entrol__name-field") Your Name
+                input.entrol__contact-us-field#entrol__name-field(type="text")
+                label.entrol__contact-us-label(for="entrol__name-field") Contact Number
+                input.entrol__contact-us-field#entrol__name-field(type="text")
+                +btn()

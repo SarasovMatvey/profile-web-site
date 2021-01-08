@@ -1,5 +1,16 @@
 .hero
   background: var(--c-light-1)
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    pointer-events: none  
+    // TODO: набольших огромных экранах кинуть горы как фон блоку hero
+    background: url('../assets/img/mountain.png') bottom / contain no-repeat
   &__top
     display: grid
     grid-auto-flow: column
@@ -24,3 +35,86 @@
     text-align: right
     padding: 
       right: 2.6875rem
+  &__bottom
+    height: 55.625rem
+    background: var(--c-accent-2)
+  &__nav
+    padding:
+      left: 2.3125rem
+    margin: 
+      bottom: 5.75rem
+    color: var(--c-light-4)
+  &__nav-inner
+    display: inline-grid
+    grid-auto-flow: column
+  &__nav-item
+    margin:
+      right: 3.3125rem
+    padding:
+      top: 2rem
+      bottom: 1rem
+  &__nav-link
+    display: block
+    color: inherit
+    text-decoration: none
+    font-family: var(--f-main)
+    font-weight: 700
+    font-size: 1rem
+  &__dropdown-toggle
+    position: relative
+    display: flex
+    align-items: center
+    cursor: pointer
+    &::after
+      content: '\f078'
+      margin-left: 0.5rem
+      width: 0.875rem
+      height: 0.875rem
+      background: var(--c-brand-3)
+      font-size: 0.5rem
+      font-family: icomoon
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 0.125rem
+    &:hover .hero__dropdown-menu
+      display: grid
+  &__dropdown-menu
+    display: none
+    grid-auto-columns: 100%
+    width: 12.5rem
+    position: absolute
+    z-index: 1
+    left: 50%
+    top: 100%
+    transform: translateX(-50%)
+    border-radius: 0.625rem
+    border: 0.125rem solid var(--c-light-4)
+    overflow: hidden
+    background: rgba(var(--c-light-4-rgb), 0.2)
+  &__dropdown-menu-item
+    text-align: center
+    &:last-child .hero__dropdown-menu-link
+      border-bottom: none
+  &__dropdown-menu-link
+    font-size: 0.875rem
+    padding: 
+      top: 1rem
+      bottom: 1rem
+    border-bottom: 2px solid var(--c-light-4)
+  
+  &__title-block
+    color: var(--c-light-2)
+    max-width: 24.6875rem
+    margin-left: auto
+  &__title
+    font-family: var(--f-secondary)
+    font-weight: 300
+    font-size: 2.5rem
+    letter-spacing: -0.0625rem
+    margin: 
+      bottom: 1.5625rem 
+  &__text
+    font-size: 1.25rem
+    font-weight: 700
+    font-family: var(--f-main)

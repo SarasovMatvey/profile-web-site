@@ -1,0 +1,6 @@
+=colorVar($name, $color)
+	--#{$name}: #{$color}
+	--#{$name}-rgb: #{hexToRGB($color)}
+
+@function hexToRGB($hex)
+	@return red($hex), green($hex), blue($hex)

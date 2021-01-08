@@ -63,22 +63,40 @@
 
 :root {
   --c-brand-1: #253957;
+  --c-brand-1-rgb: 37, 57, 87;
   --c-brand-2: #344d71;
+  --c-brand-2-rgb: 52, 77, 113;
   --c-brand-3: #3a557c;
+  --c-brand-3-rgb: 58, 85, 124;
   --c-brand-4: #466289;
+  --c-brand-4-rgb: 70, 98, 137;
   --c-brand-5: #516e96;
+  --c-brand-5-rgb: 81, 110, 150;
   --c-brand-6: #4771af;
+  --c-brand-6-rgb: 71, 113, 175;
   --c-accent-1: #de9e20;
+  --c-accent-1-rgb: 222, 158, 32;
   --c-accent-2: #f6b431;
+  --c-accent-2-rgb: 246, 180, 49;
   --c-gray-1: #63727a;
+  --c-gray-1-rgb: 99, 114, 122;
   --c-gray-2: #61757f;
+  --c-gray-2-rgb: 97, 117, 127;
   --c-gray-3: #83969f;
+  --c-gray-3-rgb: 131, 150, 159;
   --c-gray-4: #aeb3ba;
+  --c-gray-4-rgb: 174, 179, 186;
   --c-light-1: #ecedf1;
+  --c-light-1-rgb: 236, 237, 241;
   --c-light-2: #fbfbfb;
+  --c-light-2-rgb: 251, 251, 251;
   --c-light-3: #fafdfd;
+  --c-light-3-rgb: 250, 253, 253;
   --c-light-4: #ffffff;
+  --c-light-4-rgb: 255, 255, 255;
   --f-main: "Montserrat";
+  --f-secondary: "Raleway";
+  --f-third: "Ubuntu";
   --gutters: 15px;
 }
 
@@ -151,6 +169,17 @@ table {
 
 .hero {
   background: var(--c-light-1);
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url("../assets/img/mountain.png") bottom/contain no-repeat;
 }
 .hero__top {
   display: grid;
@@ -176,6 +205,97 @@ table {
   font-family: var(--f-main);
   text-align: right;
   padding-right: 2.6875rem;
+}
+.hero__bottom {
+  height: 55.625rem;
+  background: var(--c-accent-2);
+}
+.hero__nav {
+  padding-left: 2.3125rem;
+  margin-bottom: 5.75rem;
+  color: var(--c-light-4);
+}
+.hero__nav-inner {
+  display: inline-grid;
+  grid-auto-flow: column;
+}
+.hero__nav-item {
+  margin-right: 3.3125rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.hero__nav-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--f-main);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.hero__dropdown-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.hero__dropdown-toggle::after {
+  content: "";
+  margin-left: 0.5rem;
+  width: 0.875rem;
+  height: 0.875rem;
+  background: var(--c-brand-3);
+  font-size: 0.5rem;
+  font-family: icomoon;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.125rem;
+}
+.hero__dropdown-toggle:hover .hero__dropdown-menu {
+  display: grid;
+}
+.hero__dropdown-menu {
+  display: none;
+  grid-auto-columns: 100%;
+  width: 12.5rem;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border-radius: 0.625rem;
+  border: 0.125rem solid var(--c-light-4);
+  overflow: hidden;
+  background: rgba(var(--c-light-4-rgb), 0.2);
+}
+.hero__dropdown-menu-item {
+  text-align: center;
+}
+.hero__dropdown-menu-item:last-child .hero__dropdown-menu-link {
+  border-bottom: none;
+}
+.hero__dropdown-menu-link {
+  font-size: 0.875rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--c-light-4);
+}
+.hero__title-block {
+  color: var(--c-light-2);
+  max-width: 24.6875rem;
+  margin-left: auto;
+}
+.hero__title {
+  font-family: var(--f-secondary);
+  font-weight: 300;
+  font-size: 2.5rem;
+  letter-spacing: -0.0625rem;
+  margin-bottom: 1.5625rem;
+}
+.hero__text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-family: var(--f-main);
 }
 
 .logo {
@@ -261,10 +381,129 @@ table {
 .stretch-outside-viewport::after {
   content: "";
   position: absolute;
-  left: 100%;
+  top: 0;
+  left: 99%;
   background: inherit;
   width: 100vw;
   height: 100%;
+}
+
+.stretch-outside-viewport_to_left::after {
+  left: auto;
+  right: 99%;
+}
+
+.entrol {
+  background: var(--c-light-1);
+}
+.entrol__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.entrol__entrol-now {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  padding-left: 2.5rem;
+  padding-right: 3.75rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-family: var(--f-main);
+  color: var(--c-light-4);
+  grid-column: span 2;
+  background: var(--c-gray-3);
+}
+.entrol__entrol-now-text {
+  max-width: 30.625rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.entrol__link {
+  font-size: 1.25rem;
+  color: inherit;
+  font-weight: 400;
+}
+.entrol__entrol-now-show-more {
+  justify-self: flex-end;
+  text-decoration: none;
+  color: inherit;
+}
+.entrol .icon-ent-chevron-right {
+  font-size: 1.75rem;
+}
+.entrol__contact-us-wrap {
+  position: relative;
+}
+.entrol__contact-us {
+  padding-top: 3.375rem;
+  padding-bottom: 3.375rem;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+  background: var(--c-brand-2);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.entrol__contact-us-title {
+  font-size: 1.5rem;
+  color: var(--c-light-3);
+  font-weight: 500;
+  font-family: var(--f-secondary);
+  margin-bottom: 0.75rem;
+}
+.entrol__contact-us-text {
+  font-size: 14px;
+  line-height: 1.28;
+  color: var(--c-light-1);
+  font-weight: bold;
+  font-family: var(--f-main);
+  margin-bottom: 2.0625rem;
+}
+.entrol__contact-us-label {
+  font-family: var(--f-third);
+  font-size: 0.8125rem;
+  color: var(--c-light-3);
+  font-weight: 500;
+  font-family: "Ubuntu";
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.entrol__contact-us-field {
+  font-family: var(--f-main);
+  width: 100%;
+  height: 2.8125rem;
+  border: none;
+  border-radius: 0.125rem;
+  box-shadow: 0px 1px 0px var(--c-brand-6);
+  background-color: var(--c-light-2);
+  margin-bottom: 0.9375rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.3125rem;
+  background: var(--c-accent-2);
+  border: none;
+  border-radius: 0.1875rem;
+  color: var(--c-light-4);
+  cursor: pointer;
+}
+.btn__text {
+  text-transform: uppercase;
+  font-family: var(--f-main);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.0625rem;
+  margin-right: 0.5rem;
+}
+.btn__icon {
+  font-size: 0.6875rem;
 }
 
 /*# sourceMappingURL=style.css.map */
