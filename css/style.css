@@ -483,6 +483,8 @@ table {
 @media screen and (max-width: 970px) {
   .entrol__entrol-now {
     grid-column: span 3;
+    margin-left: calc(var(--gutters) * -1);
+    margin-right: calc(var(--gutters) * -1);
   }
 }
 .entrol__entrol-now-text {
@@ -510,6 +512,8 @@ table {
 @media screen and (max-width: 970px) {
   .entrol__contact-us-wrap {
     grid-column: span 3;
+    margin-left: calc(var(--gutters) * -1);
+    margin-right: calc(var(--gutters) * -1);
   }
 }
 .entrol__contact-us {
