@@ -1,0 +1,6 @@
+mixin video-preview(text)
+  a.video-preview(href = attributes.href class = attributes.class)
+    img(src = attributes.src, alt="").video-preview__img
+    .video-preview__description-block
+      i.icon-play-circle.video-preview__icon
+      h3.video-preview__title= text

@@ -1,0 +1,77 @@
+.footer 
+  background: var(--c-brand-1)
+  &__top 
+    display: grid
+    grid-template-columns: 32% 22% 46%
+  &__col
+    padding: 
+      top: 3.75rem
+      bottom: 5.625rem
+      right: 1.25rem
+    border-right: 1px solid var(--c-brand-2)
+    &:last-child
+      border-right: none
+  &__about-us 
+  &__col-title 
+    margin: 
+      bottom: 1.5625rem
+    font-size: 1.125rem
+    color: var(--c-accent-2)
+    font-weight: 700
+    font-family: var(--f-main)
+  &__col-link 
+    display: block
+    font-size: 0.8125rem
+    color: var(--c-light-1)
+    font-weight: 700
+    font-family: var(--f-main)
+    text-decoration: none
+  &__about-us-link 
+    margin: 
+      bottom: 0.9375rem
+  &__information 
+    padding: 
+      left: 2.5rem
+  &__information-link 
+    margin: 
+      bottom: 1.5625rem
+  &__contact-us 
+    padding: 
+      left: 2.5rem
+  &__contact-us-group 
+    margin: 
+      bottom: 3.125rem
+  &__contact-us-line 
+    margin: 
+      bottom: 1.5625rem
+    font-size: 0.8125rem  
+    color: var(--c-light-1)
+    font-weight: bold  
+    font-family: var(--f-main)  
+  &__contact-us-group-title 
+    margin: 
+      bottom: 1.25rem
+    font-size: 0.8125rem  
+    color: var(--c-light-1)
+    font-weight: bold  
+    font-family: var(--f-main)  
+  &__bottom
+    background: var(--c-brand-2)
+  &__bottom-inner
+    padding: 
+      top: 1.875rem
+      bottom: 7.1875rem
+    position: relative
+  &__bottom-text
+    font-size: 0.8125rem  
+    line-height: 1.76
+    color: var(--c-brand-5)
+    font-weight: bold  
+    font-family: var(--f-main)  
+  &__phone-number
+    position: absolute
+    top: -3.375rem
+    right: var(--gutters)
+    .phone-number__number
+      &::after
+        display: none

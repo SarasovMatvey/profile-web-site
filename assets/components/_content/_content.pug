@@ -1,0 +1,109 @@
+mixin content(data)
+  section.content
+    .container
+      .content__base-wrap
+          .content__base
+            .content__base-col
+              h2.content__base-title.
+                Lorem ipsum dolor sit amet,
+                consectetur adipisicing
+              p.content__base-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              +btn('Read More')(class='btn_color_brand content__btn', href='#')
+            .content__base-col
+              h2.content__base-title.
+                Lorem ipsum dolor sit amet,
+                consectetur adipisicing
+              ul.content__list
+                li.content__list-item.
+                  Lorem ipsum dolor sit amet, consectetur
+                li.content__list-item.
+                  Lorem ipsum dolor sit amet, consectetur 
+                  adipisicing elit, sed do eiusmod tempor 
+                li.content__list-item.
+                  Lorem ipsum dolor sit amet, consectetur
+                li.content__list-item.
+                  Lorem ipsum dolor sit amet, consectetur 
+                  adipisicing elit, sed do eiusmod tempor 
+
+              +btn('Read More')(class='content__btn', href='#')
+            .content__base-col
+              +video-preview(
+                'Hear what our students have to say!'
+                )(href='#', src='./assets/img/night.jpg', class='content__base-video-preview')
+              p.content__base-text.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+      ul.content__quicklinks
+            li.content__quicklink.content__quicklink_brand_3
+              h3.content__quicklink-title Accounting Courses
+              p.content__quicklink-text Our Institute provides engaging and
+              a.content__quicklink-btn(href='#')
+                i.icon-search
+            li.content__quicklink.content__quicklink_brand_4
+              h3.content__quicklink-title Accounting Courses
+              p.content__quicklink-text Our Institute provides engaging and
+              a.content__quicklink-btn(href='#')
+                i.icon-search
+            li.content__quicklink.content__quicklink_brand_1
+              h3.content__quicklink-title Accounting Courses
+              p.content__quicklink-text Our Institute provides engaging and
+              a.content__quicklink-btn(href='#')
+                i.icon-search
+            li.content__quicklink.content__quicklink_brand_5
+              h3.content__quicklink-title Accounting Courses
+              p.content__quicklink-text Our Institute provides engaging and
+              a.content__quicklink-btn(href='#')
+                i.icon-search
+            li.content__quicklink.content__quicklink_brand_6
+              h3.content__quicklink-title Accounting Courses
+              p.content__quicklink-text Our Institute provides engaging and
+              a.content__quicklink-btn(href='#')
+                i.icon-search
+            li.content__quicklink.content__quicklink_brand_3
+              h3.content__quicklink-title Accounting Courses
+              p.content__quicklink-text Our Institute provides engaging and
+              a.content__quicklink-btn(href='#')
+                i.icon-search
+    .content__summery-wrap
+      .container
+        .content__summery
+          .content__summery-news
+            .content__summery-caption.stretch-outside-viewport.stretch-outside-viewport_to_left
+              h3.content__summery-caption-title Latest News
+            .content__summery-posts
+              .content__summery-post
+                a.content__summery-post-link(href='#').
+                  Looking to career change into Bookkeeping or Financial Planning?
+                p.content__summery-post-text.
+                  Changing your career at any age need not be a daunting prospect, it can be...
+                time.content__summery-time(datetime='#') October 8th, 2014
+              .content__summery-post
+                a.content__summery-post-link(href='#').
+                  Looking to career change into Bookkeeping or Financial Planning?
+                p.content__summery-post-text.
+                  Changing your career at any age need not be a daunting prospect, it can be...
+                time.content__summery-time(datetime='#') October 8th, 2014
+          .content__summery-other
+            .content__summery-blog
+              .content__summery-caption
+                h3.content__summery-caption-title Latest News
+              .content__summery-posts
+                .content__summery-post
+                  a.content__summery-post-link(href='#').
+                    Looking to career change into Bookkeeping or Financial Planning?
+                  p.content__summery-post-text.
+                    Changing your career at any age need not be a daunting prospect, it can be...
+                  time.content__summery-time(datetime='#') October 8th, 2014
+                .content__summery-post
+                  a.content__summery-post-link(href='#').
+                    Looking to career change into Bookkeeping or Financial Planning?
+                  p.content__summery-post-text.
+                    Changing your career at any age need not be a daunting prospect, it can be...
+                  time.content__summery-time(datetime='#') October 8th, 2014
+            .content__summery-videos
+              .content__summery-caption.content__summery-caption_m_small.stretch-outside-viewport
+                h3.content__summery-caption-title Latest News
+              +video-preview('Thinking of studying online?')(href='#', src='./assets/img/laptop1.jpg', class='content__summery-video-preview')
+              +video-preview('Thinking of studying online?')(href='#', src='./assets/img/laptop2.jpg', class='content__summery-video-preview')
+
+

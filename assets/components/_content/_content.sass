@@ -1,0 +1,175 @@
+.content
+  background: var(--c-light-1)
+  &__base-wrap
+    background: var(--c-light-1)
+  &__base
+    display: grid
+    grid-auto-columns: 1fr
+    grid-auto-flow: column
+  &__base-col
+    padding: 
+      top: 2.5rem
+      left: 2.5rem
+      right: 2.5rem
+      bottom: 3.4375rem
+    &:nth-child(odd)
+      background: var(--c-light-4)
+    &:nth-child(even)
+      background: var(--c-light-2)
+  &__base-title
+    font-size: 1.25rem
+    color: var(--c-gray-1)
+    font-weight: 400
+    font-family: var(--f-fourth)
+    margin: 
+      bottom: 33px
+  &__base-text
+    font-size: 0.875rem
+    line-height: 1.85
+    color: var(--c-gray-2)
+    font-family: var(--f-main)
+    margin: 
+      bottom: 4rem
+    &:last-child
+      margin-bottom: 0
+  &__base-video-preview
+    height: 15.3125rem
+    margin: 
+      top: -2.5rem
+      left: -2.5rem
+      right: -2.5rem
+      bottom: 2.125rem
+  &__btn
+    max-width: 11.25rem
+  &__list
+    margin: 
+      bottom: 1.875rem
+  &__list-item
+    position: relative
+    margin: 
+      bottom: 1.25rem
+    padding: 
+      left: 1.375rem
+    font-size: 0.875rem
+    line-height: 1.42
+    color: var(--c-brand-2)
+    font-family: var(--f-main)
+    &::before
+      content: ''
+      display: block
+      width: 0.6875rem
+      height: 0.6875rem
+      position: absolute
+      left: 0
+      top: 0.3125rem
+      border-radius: 50%
+      border: 2px solid var(--c-accent-2)
+  &__quicklinks
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+  &__quicklink 
+    display: grid
+    grid-auto-flow: column
+    grid-template-rows: repeat(2, max-content)
+    background: red
+    padding: 
+      top: 2.1875rem
+      bottom: 2.1875rem
+      left: 2.5rem
+      right: 3.125rem
+  &__quicklink_brand_1
+    background: var(--c-brand-1)
+  &__quicklink_brand_3
+    background: var(--c-brand-3)
+  &__quicklink_brand_4
+    background: var(--c-brand-4)
+  &__quicklink_brand_5
+    background: var(--c-brand-5)
+  &__quicklink_brand_6
+    background: var(--c-brand-6)
+  &__quicklink-title 
+    font-size: 1.125rem
+    color: var(--c-light-3)
+    font-family: var(--f-main)
+    margin: 
+      bottom: 0.625rem
+  &__quicklink-text 
+    font-size: 0.8125rem
+    color: var(--c-light-2)
+    font-family: var(--f-main)
+  &__quicklink-btn 
+    color: var(--c-brand-2)
+    justify-self: flex-end
+    text-decoration: none
+    font-size: 1.5rem
+   
+  &__summery-wrap
+    background: var(--c-light-4)
+  &__summery
+    display: flex
+  &__summery-news
+    width: 32% 
+    display: flex
+    flex-direction: column
+    border-right: 0.0625rem solid var(--c-gray-4)
+  &__summery-caption 
+    margin: 
+      bottom: 2.1875rem
+    padding: 
+      top: 1.5625rem
+      bottom: 1.5625rem
+    background: var(--c-light-2)
+    border-bottom: 0.0625rem solid var(--c-gray-4)
+  &__summery-caption_m_small
+    margin: 
+      bottom: 0.875rem
+  &__summery-caption-title 
+    position: relative
+    z-index: 1
+    font-size: 0.875rem
+    color: var(--c-gray-1)
+    font-weight: 700
+    font-family: var(--f-main)
+    text-transform: uppercase
+  &__summery-posts   
+    padding: 
+      right: 1.875rem
+  &__summery-post 
+    margin: 
+      bottom: 4.0625rem
+    line-height: 1.37
+    font-family: var(--f-main)
+  &__summery-post-link 
+    font-size: 1rem
+    margin: 
+      bottom: 0.3125rem
+    color: var(--c-accent-2)
+    text-decoration: none
+  &__summery-post-text 
+    margin: 
+      bottom: 0.3125rem
+    font-size: 0.875rem
+    color: var(--c-brand-2)
+  &__summery-other 
+    width: 68% 
+    display: flex
+  &__summery-blog 
+    width: 52%
+    display: flex
+    flex-direction: column
+    .content__summery-caption, .content__summery-posts
+      padding:
+        left: 3.375rem
+
+  &__summery-videos 
+    width: 48%
+    display: flex
+    flex-direction: column
+  &__summery-time
+    color: var(--c-gray-4)
+    font-style: italic
+    font-size: 0.875rem
+  &__summery-video-preview
+    margin: 
+      bottom: 0.625rem
+    height: 13.75rem

@@ -1,4 +1,10 @@
-mixin btn(data)
-  button.btn
-    p.btn__text Call me back
-    i.btn__icon.icon-fa-chevron-right
+mixin btn(text, tag='a')
+  case tag
+    when 'a'
+      a.btn(class = attributes.class, href = attributes.href)
+        p.btn__text= text
+        i.btn__icon.icon-fa-chevron-right
+    when 'btn'
+      button.btn(class = attributes.class, type = attributes.type)
+          p.btn__text= text
+          i.btn__icon.icon-fa-chevron-right

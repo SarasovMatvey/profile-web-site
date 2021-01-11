@@ -1,0 +1,41 @@
+mixin footer(data)
+  footer.footer
+    .container
+      .footer__top
+        .footer__col.footer__about-us
+          h3.footer__col-title About Us
+          a.footer__col-link.footer__about-us-link(href='#') Financial Planning Courses
+          a.footer__col-link.footer__about-us-link(href='#') Diploma Financial Planning
+          a.footer__col-link.footer__about-us-link(href='#') RG146 Compliant Life Insurance
+          a.footer__col-link.footer__about-us-link(href='#') RG146 Compliant Superannuation
+          a.footer__col-link.footer__about-us-link(href='#') RG146 Compliant Investments
+          a.footer__col-link.footer__about-us-link(href='#') RG146 Compliant SMSF (Accountants Exemption)
+          a.footer__col-link.footer__about-us-link(href='#') Accounting & Bookkeeping Courses
+          a.footer__col-link.footer__about-us-link(href='#') Certificate IV in AccountingCertificate IV in Bookkeeping
+          a.footer__col-link.footer__about-us-link(href='#') BAS and Payroll
+          a.footer__col-link.footer__about-us-link(href='#') MYOB TrainingDual Qualifications
+        .footer__col.footer__information
+          h3.footer__col-title Information
+          a.footer__col-link.footer__information-link(href="#") Goverment funding
+          a.footer__col-link.footer__information-link(href="#") Enrol Now
+          a.footer__col-link.footer__information-link(href="#") Why Us
+          a.footer__col-link.footer__information-link(href="#") Student Info
+          a.footer__col-link.footer__information-link(href="#") Blog 
+          a.footer__col-link.footer__information-link(href="#") Contact Us
+        .footer__col.footer__contact-us
+          h3.footer__col-title Contact Us
+          .footer__contact-us-group
+            p.footer__contact-us-line Phone 1300 555 555
+            p.footer__contact-us-line Fax 03 9614 5555
+            p.footer__contact-us-line Email admin@youremail.com
+          .footer__contact-us-group
+            h4.footer__contact-us-group-title Postal Address
+            p.footer__contact-us-line 28 Postal Street
+            p.footer__contact-us-line Suburb, Melbourne
+            p.footer__contact-us-line Australia
+    .footer__bottom
+      .container.footer__bottom-inner
+        p.footer__bottom-text.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        +phone-number()(class='footer__phone-number')
+
