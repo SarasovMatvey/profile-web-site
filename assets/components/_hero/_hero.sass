@@ -3,6 +3,7 @@
   position: relative
   &::after
     content: ''
+    z-index: 2
     position: absolute
     left: 0
     top: 0
@@ -23,6 +24,14 @@
     display: grid
     grid-template-columns: 1fr
     grid-auto-flow: column
+    +media(620px)
+      grid-auto-flow: row
+      .hero__email
+        +stretch-outside-viewport()
+        padding: 
+          top: 0.9375rem
+          bottom: 0.9375rem
+          right: 0
   &__email
     display: flex
     align-items: center
@@ -38,12 +47,23 @@
   &__bottom
     height: 55.625rem
     background: var(--c-accent-2)
-  &__nav
     padding:
       left: 2.3125rem
+      right: 2.3125rem
+    +media(1200px)
+      height: 47.5rem
+    +media(880px)
+      height: 39.6875rem
+    +media(800px)
+      padding: 
+        top: 92px
+  &__nav
     margin: 
       bottom: 5.75rem
+      right: -2.3125rem
     color: var(--c-light-4)
+    +media(800px)
+      display: none
   &__nav-inner
     display: inline-grid
     grid-auto-flow: column
@@ -53,6 +73,12 @@
     padding:
       top: 2rem
       bottom: 1rem
+    &:last-child
+      margin: 
+        right: 0
+    +media(950px)
+      margin: 
+        right: 1.875rem
   &__nav-link
     display: block
     color: inherit
@@ -91,11 +117,14 @@
     border-radius: 0.625rem
     border: 0.125rem solid var(--c-light-4)
     overflow: hidden
-    background: rgba(var(--c-light-4-rgb), 0.2)
+    background: rgba(var(--c-accent-2-rgb), .9)
   &__dropdown-menu-item
     text-align: center
     &:last-child .hero__dropdown-menu-link
       border-bottom: none
+    &:hover
+     background: rgba(var(--c-accent-1-rgb), .9)
+      
   &__dropdown-menu-link
     font-size: 0.875rem
     padding: 

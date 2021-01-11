@@ -4,3 +4,9 @@
 
 @function hexToRGB($hex)
 	@return red($hex), green($hex), blue($hex)
+
+=media($width)
+	@media screen and ( max-width: $width )
+		&
+			@content
+		

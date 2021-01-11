@@ -6,7 +6,7 @@ mixin hero(data)
         +socials()
       address.hero__address
         .hero__email admin@youremail.com.au
-        +phone-number()
+        +phone-number()(class='hero__phone-number')
       .hero__bottom.stretch-outside-viewport
         nav.hero__nav
           ul.hero__nav-inner
@@ -41,8 +41,19 @@ mixin hero(data)
               a.hero__nav-link(href='#') Services
             li.hero__nav-item
               a.hero__nav-link(href='#') Blog 
-            li.hero__nav-item
+            li.hero__nav-item.hero__dropdown-toggle
               a.hero__nav-link(href='#') Contact
+               ul.hero__dropdown-menu
+                li.hero__dropdown-menu-item
+                  a.hero__nav-link.hero__dropdown-menu-link(href='#') test
+                li.hero__dropdown-menu-item
+                  a.hero__nav-link.hero__dropdown-menu-link(href='#') test
+                li.hero__dropdown-menu-item
+                  a.hero__nav-link.hero__dropdown-menu-link(href='#') test
+                li.hero__dropdown-menu-item
+                  a.hero__nav-link.hero__dropdown-menu-link(href='#') test
+                li.hero__dropdown-menu-item
+                  a.hero__nav-link.hero__dropdown-menu-link(href='#') test
         .hero__title-block          
           h1.hero__title Reach your limits
           p.hero__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor

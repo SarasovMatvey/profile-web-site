@@ -1,6 +1,8 @@
-.stretch-outside-viewport
+=stretch-outside-viewport()
   position: relative
+  z-index: 1
   &::after
+    z-index: -1
     content: ''
     position: absolute
     top: 0
@@ -11,6 +13,8 @@
     height: 100%
     border: inherit
     box-sizing: content-box
+.stretch-outside-viewport
+  +stretch-outside-viewport
 .stretch-outside-viewport_to_left
   &::after
     left: auto

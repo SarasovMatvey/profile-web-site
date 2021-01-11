@@ -16,6 +16,8 @@
     color: var(--c-light-4)
     grid-column: span 2
     background: var(--c-gray-3)
+    +media(970px)
+      grid-column: span 3
   &__entrol-now-text
     max-width: 30.625rem
     font-size: 1.25rem
@@ -33,7 +35,10 @@
     font-size: 1.75rem
   &__contact-us-wrap
     position: relative
+    +media(970px)
+      grid-column: span 3
   &__contact-us
+    z-index: 2
     padding: 
       top: 3.375rem
       bottom: 3.375rem
@@ -43,6 +48,8 @@
     position: absolute
     left: 0
     bottom: 0
+    +media(970px)
+      position: static
   &__contact-us-title
     font-size: 1.5rem
     color: var(--c-light-3)
